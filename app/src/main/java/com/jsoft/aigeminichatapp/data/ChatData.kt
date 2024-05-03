@@ -25,6 +25,7 @@ object ChatData {
                 bitmap = null,
                 isFromUser = false
             )
+            "PromptBlockedException"
         } catch (e: Exception) {
             return Chat(
                 prompt = e.message ?: "error",

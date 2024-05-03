@@ -61,7 +61,7 @@ class MainActivity : ComponentActivity() {
 
     private val uriState = MutableStateFlow("")
 
-    private val imagePicker = registerForActivityResult<PickVisualMediaRequest, Uri?>(
+    private val imagePicker = registerForActivityResult(
         ActivityResultContracts.PickVisualMedia()
     ) { uri ->
         uri?.let {
@@ -129,6 +129,7 @@ class MainActivity : ComponentActivity() {
                     }
                 }
             }
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()

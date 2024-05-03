@@ -129,7 +129,6 @@ class MainActivity : ComponentActivity() {
                     }
                 }
             }
-
             Row(
                 modifier = Modifier
                     .fillMaxWidth()

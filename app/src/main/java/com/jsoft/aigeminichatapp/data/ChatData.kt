@@ -2,11 +2,9 @@ package com.jsoft.aigeminichatapp.data
 
 import android.graphics.Bitmap
 import com.google.ai.client.generativeai.GenerativeModel
-import com.google.ai.client.generativeai.type.ResponseStoppedException
 import com.google.ai.client.generativeai.type.content
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import java.lang.Exception
 
 object ChatData {
 
@@ -27,7 +25,6 @@ object ChatData {
                 bitmap = null,
                 isFromUser = false
             )
-            "PromptBlockedException"
         } catch (e: Exception) {
             return Chat(
                 prompt = e.message ?: "error",

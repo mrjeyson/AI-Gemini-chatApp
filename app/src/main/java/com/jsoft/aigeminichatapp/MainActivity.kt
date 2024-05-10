@@ -95,7 +95,6 @@ class MainActivity : ComponentActivity() {
                     }) {
                         ChatScreen(paddingValues = it)
                     }
-
                 }
             }
         }
@@ -105,7 +104,6 @@ class MainActivity : ComponentActivity() {
     fun ChatScreen(paddingValues: PaddingValues) {
         val chatViewModel = viewModel<ChatViewModel>()
         val chatState = chatViewModel.chatState.collectAsState().value
-
 
         val bitmap = getBitmap()
         Column(
@@ -194,7 +192,6 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun UserChatItem(prompt: String, bitmap: Bitmap?) {
-
         Column(
             modifier = Modifier.padding(start = 100.dp, bottom = 22.dp)
         ) {
@@ -221,9 +218,7 @@ class MainActivity : ComponentActivity() {
                 fontSize = 17.sp,
                 color = MaterialTheme.colorScheme.onPrimary
             )
-
         }
-
     }
 
     @Composable
@@ -259,7 +254,6 @@ class MainActivity : ComponentActivity() {
         if (imageState is AsyncImagePainter.State.Success) {
             return imageState.result.drawable.toBitmap()
         }
-
         return null
     }
 }

@@ -68,7 +68,6 @@ class MainActivity : ComponentActivity() {
             uriState.update { uri.toString() }
         }
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -163,7 +162,6 @@ class MainActivity : ComponentActivity() {
                     )
                 }
                 Spacer(modifier = Modifier.width(8.dp))
-
                 TextField(
                     modifier = Modifier.weight(1f),
                     value = chatState.prompt,
@@ -245,9 +243,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun getBitmap(): Bitmap? {
-
         val uri = uriState.collectAsState().value
-
         val imageState: AsyncImagePainter.State = rememberAsyncImagePainter(
             model = ImageRequest.Builder(LocalContext.current).data(uri).size(Size.ORIGINAL).build()
         ).state

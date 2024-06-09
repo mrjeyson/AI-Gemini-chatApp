@@ -57,6 +57,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 
 class MainActivity : ComponentActivity() {
+
     private val uriState = MutableStateFlow("")
 
     private val imagePicker = registerForActivityResult(

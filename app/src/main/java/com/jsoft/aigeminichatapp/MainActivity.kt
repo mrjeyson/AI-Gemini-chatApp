@@ -57,6 +57,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 
 class MainActivity : ComponentActivity() {
+
     private val uriState = MutableStateFlow("")
     private val imagePicker = registerForActivityResult(
         ActivityResultContracts.PickVisualMedia()
@@ -65,6 +66,7 @@ class MainActivity : ComponentActivity() {
             uriState.update { uri.toString() }
         }
     }
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
